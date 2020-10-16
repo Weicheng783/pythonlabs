@@ -39,5 +39,10 @@ print(day[-5:-3]) # ti
 day == "Beautiful"
 print("Today is " + day)
 
+operand1 = input("Input a number: ")
+print ("You entered " + operand1)
+
+
+
 
 
