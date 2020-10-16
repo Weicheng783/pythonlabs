@@ -27,4 +27,17 @@ print(type(x1))
 print(type(y1))
 print(type(z1))
 
+day='Beautiful'
+print(day[1])
+print(day[0:5])
+
+print(day[-3])    # f
+print(day[-3:])   # ful
+print(day[-5:3])  # /error/empty(N/A)
+print(day[-5:-3]) # ti
+
+day == "Beautiful"
+print("Today is " + day)
+
+
 
