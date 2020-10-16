@@ -1,14 +1,30 @@
 def printState():
-    print('Red Light is '+str(redLight))
-    print('Yellow Light is '+yellowLight)
-    print('Green Light is '+greenLight)
+    print('Red Light on? '+str(redLight))
+    print('Yellow Light on? '+str(yellowLight))
+    print('Green Light on? '+str(greenLight))
 
-redLight=1
-yellowLight='off'
-greenLight='off'
+redLight=True
+yellowLight=False
+greenLight=False
 
 printState()
 
 print (type(redLight))
-print(int('3')+5)
+
+x=10
+y=20.0
+z=1j
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+x1=int(1)
+y1=int(2.8)
+z1=int('3')
+
+print(type(x1))
+print(type(y1))
+print(type(z1))
+
 
