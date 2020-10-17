@@ -2,15 +2,17 @@
 
 playerName = input('What is your name? ')
 
-print('Hello'+ playerName)
+print('\n\nHello'+ playerName)
 
 #print('1.Knight')
 #print('2.Warrior')
 #print('3.Wizard')
-
-print('Choose a character:','1.Knight','2.Warrior','3.Wizard',sep='\n')
-
 characterList=['Knight','Warrior','Wizard']
+# since the character list could grow with new characters,
+# better not to use a literal string of characters in the output.
+print('\nChoose a character:',*characterList,sep='\n')
+
+
 
 character=input('Type in your character number: ')
 
