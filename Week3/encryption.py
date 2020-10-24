@@ -1,7 +1,7 @@
 # Encryption Program
 
 #1: plaintext ← read(‘Plaintext:’)
-plaintext="HELLO"
+plaintext=input('To Encrypt What ?')
 #2: cipherText ← “ ”
 cipherText=""
 #3: alphabet ← “XYZABCDEFGHIJKLMNOPQRSTUVWXYZABC”
@@ -30,3 +30,14 @@ while plaintextPosition < len(plaintext):
 
 #15: display(cipherText)
 print(cipherText)
+
+#To Encrypt What ?LOVEPYTHON
+#ILSBMVQELK
+#To Encrypt What ?LOVEUOM
+#ILSBRLJ
+#To Encrypt What ?FULLOFLOVE
+#CRIILCILSB
+
+
+
+
