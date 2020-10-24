@@ -1,4 +1,4 @@
-# Encryption Program
+# Decryption Program
 
 #1: plaintext ← read(‘Plaintext:’) EBIIL
 plaintext=input('To Decrypt What ?')
