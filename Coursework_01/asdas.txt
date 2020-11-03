@@ -1,0 +1,11 @@
+< Statistics Summary >
+the total number of words : 4 words
+the number of words spelt correctly : 4 words
+the number of incorrectly spelt words : 0 words
+the number of words added to the dictionary : 0 words
+the number of words changed by the user accepting the suggested word : 2 words
+the time and date the input was spellchecked : 2020-11-03 09:49:33
+The amount of time elapsed to spellcheck the input : 6.422921356999723 Seconds
+Original input: ad as xsa adsad
+incorrectly spelt words: 
+result:  ad as usa sad
