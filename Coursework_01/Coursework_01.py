@@ -1,23 +1,26 @@
 import time, os, datetime, timeit
 from difflib import SequenceMatcher
 
+# Count total line(words) in the EnglishWords.txt
 count=len(open(r"EnglishWords.txt",'r').readlines())
 
+# Initialise some essential variable data
+ # Loop data
 wordnum=0
 currentline=0
-
+ # Statistics data set
 wordtrue=0
 wordfalse=0
 totalwords=0
 wordsindic=0
 wordschanged=0
 
-
+# Looping the whole process if user in program
 while True:
  mainmanu=['1. Spell check a sentence','2. Spell check a file','0. Quit the program']
  print('------------------------------Mainmanu\n'+os.getlogin()+", Welcome to Weicheng's Spell Checker !"+'\nPlease choose a mode from the following to proceed:'+
 '\n(Please enter a NUMBER for corresponding choice)')
-
+ # Looping to show possible choices
  for idx, val in enumerate(mainmanu,start=1):
     print(' '+val)
 
@@ -26,9 +29,10 @@ while True:
  if mainChoice=='1':
    print('--------------------------------Mainmanu/Sentence Check')
    sentence=input('Enter your sentence to check : ')
-
+   # Timer starts here...
    start=timeit.default_timer()
 
+   # Do some sentences auto filtered out.
    sentence=sentence.strip('')
    sentence=sentence.strip("!,.:;?~#!^*&'1234567890")
    sentence=sentence.lower()
@@ -57,19 +61,23 @@ while True:
    marka=''
    result=''
 
+   # Totalwords starts from 0, whereas split starts from 1.
    totalwords=len(split)-1
+   # Load the whole document to the <file>
    file=[line.rstrip('\n')for line in open('EnglishWords.txt')]
-
+   # wordnum starts from 0, whereas split starts from 1.
    while wordnum <= len(split)-1:
+       # If the wordnum can be found in the document, the word is true and continues.
        while currentline <= count:
            if split[wordnum] == file[currentline]:
               wordtrue += 1
               result=result+' '+split[wordnum]
               currentline=0
               break
+           # After they compared each other the process opens
            elif split[wordnum] != file[currentline]:
+              # When the line compared is the last one, output not found, otherwise line +1.
               if currentline == count-1:
-
                   while True:
                       print('--------------------------------Mainmanu/Sentence Check/Feedback')
                       print('Ooops! < '+split[wordnum]+' > did not find in the dictionary, please enter your choice below.')
@@ -97,7 +105,6 @@ while True:
                           time.sleep(2)
                           break
                       elif incorrectchoice == '4':
-
                           print('? '+split[wordnum]+" ? has the following suggestion, enter 1 to accept,or 2 to reject the word suggested.")
                           currentline=0
                           currentscore=0
@@ -143,8 +150,9 @@ while True:
                   currentline += 1
 
        wordnum += 1
-   end = timeit.default_timer()
+   end = timeit.default_timer() # Timer ends here...(Counted the whole process)
 
+   #Finalise Sentence Checking
    print('Sentence Checking Complete!')
    print('--------------------------------Mainmanu/Sentence Check/Feedback/Summary')
    print('  < Statistics Summary >')
@@ -159,7 +167,7 @@ while True:
    print('  The amount of time elapsed to spellcheck the input : '+'%s Seconds'%(end-start))
    print('')
 
-
+   # Saving the result
    newfilename=input('Please enter a filename that stores the result: ')
    newfile=open(newfilename+'.txt','w')
    print('')
@@ -168,6 +176,8 @@ while True:
    marka=''
    result=''
    print('File Created and Saved successfully!!! Return to the main in 3 secs.')
+
+   # All values need to be initialised for next run.
    wordnum=0
    currentline=0
 
@@ -176,10 +186,11 @@ while True:
    totalwords=0
    wordsindic=0
    wordschanged=0
+
    time.sleep(3)
 
  elif mainChoice=='2':
-
+ # File Checking: if the file exists, it pops the 'Exists' message. '0' to back to the main menu.
      while True:
       print('--------------------------------Mainmanu/Filename Check')
       filename=input('Enter your filename to check (enter 0 back to the main manu): ')
@@ -195,10 +206,11 @@ while True:
         print('The file '+filename+' does not exist! Please check again.(Press 0 to back)')
         time.sleep(1.5)
 
-
-
  elif mainChoice=='0':
     exit()
 
  else:
+    # Typed any not identified words in the Mainmenu.
     print('\nOoops! You typed an invalid choice! Please type again.')
+
+# 5/11/2020 Editied Release Ver 1.1
