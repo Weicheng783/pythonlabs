@@ -1,0 +1,11 @@
+< Statistics Summary >
+the total number of words : 1 words
+the number of words spelt correctly : 0 words
+the number of incorrectly spelt words : 0 words
+the number of words added to the dictionary : 0 words
+the number of words changed by the user accepting the suggested word : 0 words
+the time and date the input was spellchecked : 2020-11-04 15:17:02
+The amount of time elapsed to spellcheck the input : 40.64208044299994 Seconds
+Original input: qwd asd ssd ssh
+incorrectly spelt words:  ?asd?
+result:  qwd ?asd? ssd sash

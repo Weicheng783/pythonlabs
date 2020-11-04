@@ -1,0 +1,11 @@
+< Statistics Summary >
+the total number of words : 4 words
+the number of words spelt correctly : 2 words
+the number of incorrectly spelt words : 2 words
+the number of words added to the dictionary : 0 words
+the number of words changed by the user accepting the suggested word : 1 words
+the time and date the input was spellchecked : 2020-11-04 15:22:58
+The amount of time elapsed to spellcheck the input : 30.58242827400045 Seconds
+Original input: yousad  asdas sad asd
+incorrectly spelt words:  ?asdas? ?asd?
+result:  yours ?asdas? sad ?asd?

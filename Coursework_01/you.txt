@@ -1,0 +1,11 @@
+< Statistics Summary >
+the total number of words : 1 words
+the number of words spelt correctly : 0 words
+the number of incorrectly spelt words : 0 words
+the number of words added to the dictionary : 0 words
+the number of words changed by the user accepting the suggested word : 0 words
+the time and date the input was spellchecked : 2020-11-04 14:56:34
+The amount of time elapsed to spellcheck the input : 2.1115453530001105 Seconds
+Original input: you ce
+incorrectly spelt words: 
+result:  you ce
